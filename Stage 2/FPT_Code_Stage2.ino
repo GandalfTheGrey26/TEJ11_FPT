@@ -2,7 +2,7 @@
 Title: Traffic Light Challenge 2.0 (FPT)
 Creator: Glenn M.
 Date Of Creation: January 10th, 2022 
-Last Update: January 12th, 2022
+Last Update: January 13th, 2022
 */
 
 //Store all the pin numbers under variables:
@@ -112,7 +112,7 @@ void readPhoto(){
   North left turn 'lane'
   */
   int photoVal = analogRead(photo);   //get the photoresistor value
-  if(photoVal >= 450){                //value is greater than/equal to 450 (car IS in lane)...?
+  if(photoVal <= 450){                //value is less than/equal to 450 (car IS in lane)...?
     leftTurn = true;}                    //...set left turn to true
   else{                               //value is less than 450...?
     leftTurn = false;}                   //...set left turn to false
